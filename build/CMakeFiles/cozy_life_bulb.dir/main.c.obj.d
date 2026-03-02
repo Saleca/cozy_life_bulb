@@ -186,4 +186,43 @@ CMakeFiles/cozy_life_bulb.dir/main.c.obj: \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdio.h \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\time.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wtime.h
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wtime.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\mqtt_protocol.h \
+  C:\c_toolchain\LLVM\lib\clang\21\include\stdint.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdint.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto.h \
+  C:\c_toolchain\LLVM\lib\clang\21\include\stdbool.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdbool.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\defs.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_auth.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_callbacks.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_connect.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_create_delete.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_helpers.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_loop.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_message.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_options.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_publish.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_socks.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_subscribe.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_tls.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_unsubscribe.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libmosquitto_will.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_base64.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_cjson.h \
+  C:\Users\salgl\Documents\Projects\cozy_life_bulb\.\cjson\cJSON.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_file.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_memory.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_password.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_properties.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_random.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_string.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_time.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_topic.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\libcommon_utf8.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\broker.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\broker_control.h \
+  C:\Program\ Files\mosquitto\devel\mosquitto\broker_plugin.h \
+  C:\Users\salgl\Documents\Projects\cozy_life_bulb\cjson\cJSON.h

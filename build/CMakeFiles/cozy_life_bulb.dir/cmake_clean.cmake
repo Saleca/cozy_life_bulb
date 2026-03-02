@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj"
+  "CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj.d"
   "CMakeFiles/cozy_life_bulb.dir/main.c.obj"
   "CMakeFiles/cozy_life_bulb.dir/main.c.obj.d"
   "cozy_life_bulb.exe"

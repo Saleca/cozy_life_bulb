@@ -1,8 +1,14 @@
 [
 {
   "directory": "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build",
-  "command": "C:/c_toolchain/LLVM/bin/clang.exe -D_CRT_SECURE_NO_WARNINGS  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -O2 -o CMakeFiles/cozy_life_bulb.dir/main.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/main.c",
+  "command": "C:/c_toolchain/LLVM/bin/clang.exe -D_CRT_SECURE_NO_WARNINGS @CMakeFiles/cozy_life_bulb.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles/cozy_life_bulb.dir/main.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/main.c",
   "file": "C:/Users/salgl/Documents/Projects/cozy_life_bulb/main.c",
   "output": "CMakeFiles/cozy_life_bulb.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build",
+  "command": "C:/c_toolchain/LLVM/bin/clang.exe -D_CRT_SECURE_NO_WARNINGS @CMakeFiles/cozy_life_bulb.dir/includes_C.rsp -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -o CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/cjson/cJSON.c",
+  "file": "C:/Users/salgl/Documents/Projects/cozy_life_bulb/cjson/cJSON.c",
+  "output": "CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj"
 }
 ]

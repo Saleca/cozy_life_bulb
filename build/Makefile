@@ -129,6 +129,30 @@ cozy_life_bulb/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/build
 .PHONY : cozy_life_bulb/fast
 
+cjson/cJSON.obj: cjson/cJSON.c.obj
+.PHONY : cjson/cJSON.obj
+
+# target to build an object file
+cjson/cJSON.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj
+.PHONY : cjson/cJSON.c.obj
+
+cjson/cJSON.i: cjson/cJSON.c.i
+.PHONY : cjson/cJSON.i
+
+# target to preprocess a source file
+cjson/cJSON.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.i
+.PHONY : cjson/cJSON.c.i
+
+cjson/cJSON.s: cjson/cJSON.c.s
+.PHONY : cjson/cJSON.s
+
+# target to generate assembly for a file
+cjson/cJSON.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.s
+.PHONY : cjson/cJSON.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cozy_life_bulb"
+	@echo "... cjson/cJSON.obj"
+	@echo "... cjson/cJSON.i"
+	@echo "... cjson/cJSON.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

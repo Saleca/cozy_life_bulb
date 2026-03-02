@@ -85,12 +85,12 @@ clean: CMakeFiles/cozy_life_bulb.dir/clean
 CMakeFiles/cozy_life_bulb.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=1,2 "Built target cozy_life_bulb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=1,2,3 "Built target cozy_life_bulb"
 .PHONY : CMakeFiles/cozy_life_bulb.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cozy_life_bulb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cozy_life_bulb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 0
 .PHONY : CMakeFiles/cozy_life_bulb.dir/rule

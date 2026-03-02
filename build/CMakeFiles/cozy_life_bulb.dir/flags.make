@@ -4,7 +4,7 @@
 # compile C with C:/c_toolchain/LLVM/bin/clang.exe
 C_DEFINES = -D_CRT_SECURE_NO_WARNINGS
 
-C_INCLUDES = 
+C_INCLUDES = @CMakeFiles/cozy_life_bulb.dir/includes_C.rsp
 
-C_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Wall -Wextra -O2
+C_FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
 

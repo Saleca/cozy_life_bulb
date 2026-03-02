@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/salgl/Documents/Projects/cozy_life_bulb/cjson/cJSON.c" "CMakeFiles/cozy_life_bulb.dir/cJSON/cJSON.c.obj" "gcc" "CMakeFiles/cozy_life_bulb.dir/cJSON/cJSON.c.obj.d"
   "C:/Users/salgl/Documents/Projects/cozy_life_bulb/main.c" "CMakeFiles/cozy_life_bulb.dir/main.c.obj" "gcc" "CMakeFiles/cozy_life_bulb.dir/main.c.obj.d"
   )
 

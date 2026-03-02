@@ -1,0 +1,2 @@
+C:/c_toolchain/LLVM/bin/llvm-ar.exe qc unity.lib CMakeFiles/unity.dir/unity/src/unity.c.obj
+C:/c_toolchain/LLVM/bin/llvm-ranlib.exe unity.lib
