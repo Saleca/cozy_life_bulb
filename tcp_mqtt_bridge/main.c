@@ -268,7 +268,7 @@ void scan_network()
         return;
     }
 
-    usleep(150000);
+    usleep(300000);
 
     for (int i = 1; i < 255; i++)
     {
