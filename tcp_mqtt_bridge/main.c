@@ -1,5 +1,6 @@
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <sys/select.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
 #include <arpa/inet.h>
@@ -21,8 +22,8 @@
 #define SUBNET_PREFIX "192.168.1."
 #define HA_IP SUBNET_PREFIX "120"
 #define SLEEP_TIMEOUT_US 10000
-#define SCAN_TIMEOUT_MS 150
-#define RECONNECTION_TIMEOUT_S 10
+#define SCAN_TIMEOUT_MS 500
+#define RECONNECTION_TIMEOUT_S 60
 
 #define BULB_PAYLOAD "{\"msg\":{\"data\":{\"1\":%d,\"2\":0,\"3\":%d,\"4\":%d,\"5\":65535,\"6\":65535},\"attr\":[1,2,3,4,5,6]},\"pv\":0,\"cmd\":3,\"sn\":\"%lld\",\"res\":0}\n"
 #define BULB_PAYLOAD_POWER "{\"msg\":{\"data\":{\"1\":%d},\"attr\":[1]},\"pv\":0,\"cmd\":3,\"sn\":\"%lld\",\"res\":0}\n"
@@ -47,8 +48,6 @@ void scan_network();
 bool confirm_tcp_connection(int current_socket, int timeout_ms);
 int start_tcp_connection(const char *ip);
 
-// void probe_ip(const char *ip);
-// int open_tcp_socket(const char *ip);
 bool reconnect_tcp_socket(const int id);
 void close_tcp_socket(const int id);
 void send_tcp_packet(const int id, int power, int brightness, int warm);
@@ -56,6 +55,7 @@ void check_tcp_packet(const int id);
 void receive_tcp_packet(struct mosquitto *mqtt, const int id, const char *payload);
 
 bool init_mqtt();
+void mqtt_tick();
 void on_mqtt_connect(struct mosquitto *mqtt, void *obj, int rc);
 void send_mqtt_packet(const char *topic_base, const int id, const char *payload);
 void receive_mqtt_packet(struct mosquitto *mqtt, void *obj, const struct mosquitto_message *msg);
@@ -111,12 +111,6 @@ void ha_discovery(struct mosquitto *mqtt, int id)
         free(config_payload);
     }
     cJSON_Delete(config_payload_cjson);
-}
-
-void mqtt_tick()
-{
-    usleep(SLEEP_TIMEOUT_US);
-    mosquitto_loop(mqtt, -1, 1);
 }
 
 int main()
@@ -535,6 +529,12 @@ bool init_mqtt()
         return false;
     }
     return true;
+}
+
+void mqtt_tick()
+{
+    usleep(SLEEP_TIMEOUT_US);
+    mosquitto_loop(mqtt, -1, 1);
 }
 
 void on_mqtt_connect(struct mosquitto *mqtt, void *obj, int rc)
