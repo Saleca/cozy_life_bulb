@@ -274,6 +274,7 @@ void scan_network()
     {
         int current_socket = temp_sockets[i];
 
+        printf("socket %D", current_socket);
         if (current_socket < 0)
         {
             continue;
@@ -290,6 +291,10 @@ void scan_network()
                 printf("Found light at: %s\n", device_ips[device_count - 1]);
                 found = true;
             }
+        }
+        else
+        {
+            printf("not valid");
         }
 
         if (!found)
