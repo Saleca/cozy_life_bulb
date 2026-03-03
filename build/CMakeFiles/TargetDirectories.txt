@@ -1,3 +1,0 @@
-/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/cozy_life_bulb.dir
-/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/rebuild_cache.dir

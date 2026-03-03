@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build",
-  "command": "/usr/bin/clang-18   -g -std=gnu11 -o CMakeFiles/cozy_life_bulb.dir/main.c.o -c /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/main.c",
-  "file": "/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/main.c",
-  "output": "CMakeFiles/cozy_life_bulb.dir/main.c.o"
-}
-]
