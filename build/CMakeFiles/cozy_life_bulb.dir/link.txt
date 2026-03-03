@@ -1,0 +1,1 @@
+/usr/bin/clang-18 -g -Xlinker --dependency-file=CMakeFiles/cozy_life_bulb.dir/link.d CMakeFiles/cozy_life_bulb.dir/main.c.o -o cozy_life_bulb  /usr/lib/x86_64-linux-gnu/libmosquitto.so /usr/lib/x86_64-linux-gnu/libcjson.so

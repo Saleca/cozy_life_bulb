@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/salgl/Documents/Projects/cozy_life_bulb
+CMAKE_SOURCE_DIR = /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/salgl/Documents/Projects/cozy_life_bulb/build
+CMAKE_BINARY_DIR = /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/cozy_life_bulb.dir/clean
 CMakeFiles/cozy_life_bulb.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=1,2,3 "Built target cozy_life_bulb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=1,2 "Built target cozy_life_bulb"
 .PHONY : CMakeFiles/cozy_life_bulb.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cozy_life_bulb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cozy_life_bulb.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 0
 .PHONY : CMakeFiles/cozy_life_bulb.dir/rule
 
 # Convenience name for target.
@@ -102,6 +102,7 @@ cozy_life_bulb: CMakeFiles/cozy_life_bulb.dir/rule
 # codegen rule for target.
 CMakeFiles/cozy_life_bulb.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=1,2 "Finished codegen for target cozy_life_bulb"
 .PHONY : CMakeFiles/cozy_life_bulb.dir/codegen
 
 # clean rule for target.

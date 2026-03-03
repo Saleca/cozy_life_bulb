@@ -1,3 +1,0 @@
-C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/_deps/cjson-subbuild/CMakeFiles/cjson-populate.dir
-C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/_deps/cjson-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/_deps/cjson-subbuild/CMakeFiles/rebuild_cache.dir

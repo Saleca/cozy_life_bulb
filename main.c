@@ -1,5 +1,13 @@
-#include <winsock2.h>
-#include <ws2tcpip.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <arpa/inet.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+#include <ctype.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,8 +19,9 @@
 
 #define TARGET_PORT 5555
 #define SUBNET_PREFIX "192.168.1."
-#define MQTT_BROKER_IP SUBNET_PREFIX "120"
-#define SCAN_TIMEOUT_MS 500
+#define HA_IP SUBNET_PREFIX "120"
+#define SLEEP_TIMEOUT_US 10000
+#define SCAN_TIMEOUT_MS 150
 #define RECONNECTION_TIMEOUT_S 10
 
 #define BULB_PAYLOAD "{\"msg\":{\"data\":{\"1\":%d,\"2\":0,\"3\":%d,\"4\":%d,\"5\":65535,\"6\":65535},\"attr\":[1,2,3,4,5,6]},\"pv\":0,\"cmd\":3,\"sn\":\"%lld\",\"res\":0}\n"
@@ -33,13 +42,13 @@
 #define SET_TOPIC TOPIC_ADDRESS "/set"
 #define AVAILABILITY_TOPIC TOPIC_ADDRESS "/availability"
 
-bool init_network();
 void scan_subnet();
 void probe_ip(const char *ip);
-SOCKET open_tcp_socket(const char *ip);
+int open_tcp_socket(const char *ip);
 bool reconnect_tcp_socket(const int id);
 void close_tcp_socket(const int id);
 void send_tcp_packet(const int id, int power, int brightness, int warm);
+void check_tcp_packet(const int id);
 void receive_tcp_packet(struct mosquitto *mosq, const int id, const char *payload);
 
 bool init_mqtt();
@@ -56,7 +65,7 @@ uint16_t convert_to_kelvin(uint16_t input);
 uint16_t convert_to_permille(uint16_t input);
 
 struct mosquitto *mosq = NULL;
-SOCKET device_sockets[16];
+int device_sockets[16];
 char device_ips[16][16];
 time_t device_reconnect_time[16];
 int device_count = 0;
@@ -102,11 +111,6 @@ void ha_discovery(struct mosquitto *mosq, int id)
 
 int main()
 {
-    if (!init_network())
-    {
-        return 1;
-    }
-
     scan_subnet();
     if (device_count == 0)
     {
@@ -116,23 +120,23 @@ int main()
 
     if (!init_mqtt())
     {
-        return 1;
-    }
 
-    while (!connected)
-    {
-        Sleep(10);
-        mosquitto_loop(mosq, 1, 1);
+        return 1;
     }
 
     while (1)
     {
-        Sleep(10);
-        mosquitto_loop(mosq, 1, 1);
+        usleep(SLEEP_TIMEOUT_US);
+        mosquitto_loop(mosq, -1, 1);
+
+        if (!connected)
+        {
+            continue;
+        }
 
         for (int i = 0; i < device_count; i++)
         {
-            if (device_sockets[i] == INVALID_SOCKET)
+            if (device_sockets[i] == -1)
             {
                 if (!reconnect_tcp_socket(i))
                 {
@@ -140,45 +144,23 @@ int main()
                 }
             }
 
-            char buffer[2048];
-            int bytes = recv(device_sockets[i], buffer, sizeof(buffer) - 1, 0);
-            if (bytes > 0)
-            {
-                buffer[bytes] = '\0';
-                receive_tcp_packet(mosq, i, buffer);
-            }
-            else if (bytes == 0 || (bytes == SOCKET_ERROR && WSAGetLastError() != WSAEWOULDBLOCK))
-            {
-                close_tcp_socket(i);
-                send_mqtt_packet(AVAILABILITY_TOPIC, i, "offline");
-            }
+            check_tcp_packet(i);
         }
     }
 
     // Cleanup
     for (int i = 0; i < device_count; i++)
     {
-        closesocket(device_sockets[i]);
+        close(device_sockets[i]);
     }
 
     mosquitto_destroy(mosq);
     mosquitto_lib_cleanup();
 
-    WSACleanup();
     return 0;
 }
 
 /* NETWORK */
-bool init_network()
-{
-    WSADATA wsaData;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
-    {
-        printf("Failed start up\n");
-        return false;
-    }
-    return true;
-}
 
 void scan_subnet()
 {
@@ -197,8 +179,8 @@ void scan_subnet()
 
 void probe_ip(const char *ip)
 {
-    SOCKET current_socket = open_tcp_socket(ip);
-    if (current_socket == INVALID_SOCKET)
+    int current_socket = open_tcp_socket(ip);
+    if (current_socket == -1)
     {
         return;
     }
@@ -209,31 +191,40 @@ void probe_ip(const char *ip)
     printf("Found light at: %s\n", ip);
 }
 
-SOCKET open_tcp_socket(const char *ip)
+int open_tcp_socket(const char *ip)
 {
-    SOCKET current_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if (current_socket == INVALID_SOCKET)
+    int current_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (current_socket == -1)
     {
-        fprintf(stderr, "Socket error: %d\n", WSAGetLastError());
-        WSACleanup();
-        return INVALID_SOCKET;
+        fprintf(stderr, "Socket error: %s\n", strerror(errno));
+        return -1;
     }
 
-    unsigned long mode = 1;
-    ioctlsocket(current_socket, FIONBIO, &mode);
+    int flags = fcntl(current_socket, F_GETFL, 0);
+    fcntl(current_socket, F_SETFL, flags | O_NONBLOCK);
+
+    int one = 1;
+    setsockopt(current_socket, IPPROTO_TCP, TCP_NODELAY, &one, sizeof(one));
 
     struct sockaddr_in server;
+    memset(&server, 0, sizeof(server));
     server.sin_family = AF_INET;
     server.sin_port = htons(TARGET_PORT);
 
     if (inet_pton(AF_INET, ip, &server.sin_addr) <= 0)
     {
         fprintf(stderr, "Invalid IP address format.\n");
-        closesocket(current_socket);
-        return INVALID_SOCKET;
+        close(current_socket);
+        return -1;
     }
 
-    connect(current_socket, (struct sockaddr *)&server, sizeof(server));
+    int res = connect(current_socket, (struct sockaddr *)&server, sizeof(server));
+
+    if (res < 0 && errno != EINPROGRESS)
+    {
+        close(current_socket);
+        return -1;
+    }
 
     fd_set write_set;
     FD_ZERO(&write_set);
@@ -243,11 +234,21 @@ SOCKET open_tcp_socket(const char *ip)
     tv.tv_sec = 0;
     tv.tv_usec = SCAN_TIMEOUT_MS * 1000;
 
-    if (select(0, NULL, &write_set, NULL, &tv) <= 0)
+    if (select(current_socket + 1, NULL, &write_set, NULL, &tv) <= 0)
     {
-        closesocket(current_socket);
-        return INVALID_SOCKET;
+        close(current_socket);
+        return -1;
     }
+
+    int so_error;
+    socklen_t len = sizeof(so_error);
+    if (getsockopt(current_socket, SOL_SOCKET, SO_ERROR, &so_error, &len) < 0 || so_error != 0)
+    {
+        close(current_socket);
+        return -1;
+    }
+
+    fcntl(current_socket, F_SETFL, flags);
 
     return current_socket;
 }
@@ -260,7 +261,7 @@ bool reconnect_tcp_socket(const int id)
     }
 
     device_sockets[id] = open_tcp_socket(device_ips[id]);
-    if (device_sockets[id] == INVALID_SOCKET)
+    if (device_sockets[id] == -1)
     {
         device_reconnect_time[id] = time(NULL) + RECONNECTION_TIMEOUT_S;
         return false;
@@ -301,9 +302,22 @@ void send_tcp_packet(const int id, int power, int brightness, int warmth)
                        power, warmth, brightness, sn);
     }
 
-    if (send(device_sockets[id], buffer, len, 0) == SOCKET_ERROR)
+    ssize_t sent_len = send(device_sockets[id], buffer, len, MSG_NOSIGNAL);
+    if (sent_len < (ssize_t)len)
     {
-        fprintf(stderr, "Send failed: %d\n", WSAGetLastError());
+        printf("Partial send: %zd of %d bytes\n", sent_len, len);
+    }
+
+    if (sent_len == -1)
+    {
+        if (errno == EPIPE)
+        {
+            printf("[TCP] Connection broken (EPIPE). Lamp disconnected.\n");
+        }
+        else
+        {
+            fprintf(stderr, "Send failed: %s\n", strerror(errno));
+        }
         close_tcp_socket(id);
         send_mqtt_packet(AVAILABILITY_TOPIC, id, "offline");
         return;
@@ -317,7 +331,7 @@ void send_tcp_packet(const int id, int power, int brightness, int warmth)
     tv.tv_sec = 0;
     tv.tv_usec = SCAN_TIMEOUT_MS * 1000;
 
-    if (select(0, &read_set, NULL, NULL, &tv) <= 0)
+    if (select(device_sockets[id] + 1, &read_set, NULL, NULL, &tv) <= 0)
     {
         close_tcp_socket(id);
         send_mqtt_packet(AVAILABILITY_TOPIC, id, "offline");
@@ -412,10 +426,39 @@ void receive_tcp_packet(struct mosquitto *mosq, const int id, const char *payloa
     send_mqtt_packet(STATE_TOPIC, id, ha_state);
 }
 
+void check_tcp_packet(const int id)
+{
+    fd_set read_set;
+    FD_ZERO(&read_set);
+    FD_SET(device_sockets[id], &read_set);
+
+    struct timeval timeout;
+    timeout.tv_sec = 0;
+    timeout.tv_usec = 1000;
+
+    if (select(device_sockets[id] + 1, &read_set, NULL, NULL, &timeout) <= 0)
+    {
+        return;
+    }
+
+    char buffer[2048];
+    int bytes = recv(device_sockets[id], buffer, sizeof(buffer) - 1, 0);
+    if (bytes > 0)
+    {
+        buffer[bytes] = '\0';
+        receive_tcp_packet(mosq, id, buffer);
+    }
+    else if (bytes == 0 || (bytes == -1 && errno != EWOULDBLOCK && errno != EAGAIN))
+    {
+        close_tcp_socket(id);
+        send_mqtt_packet(AVAILABILITY_TOPIC, id, "offline");
+    }
+}
+
 void close_tcp_socket(const int id)
 {
-    closesocket(device_sockets[id]);
-    device_sockets[id] = INVALID_SOCKET;
+    close(device_sockets[id]);
+    device_sockets[id] = -1;
 }
 
 /* MQTT */
@@ -434,9 +477,9 @@ bool init_mqtt()
     mosquitto_connect_callback_set(mosq, on_mqtt_connect);
     mosquitto_message_callback_set(mosq, receive_mqtt_packet);
 
-    if (mosquitto_connect(mosq, MQTT_BROKER_IP, 1883, 60) != MOSQ_ERR_SUCCESS)
+    if (mosquitto_connect(mosq, HA_IP, 1883, 60) != MOSQ_ERR_SUCCESS)
     {
-        printf("Error: Could not connect to MQTT Broker at %s\n", MQTT_BROKER_IP);
+        printf("Error: Could not connect to MQTT Broker at %s\n", HA_IP);
         return false;
     }
     return true;
@@ -472,8 +515,9 @@ void send_mqtt_packet(const char *topic_base, const int id, const char *payload)
 
 void receive_mqtt_packet(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg)
 {
-    if (!msg->payload)
+    if (!msg->payload || msg->payloadlen == 0)
     {
+        printf("no payload. (payload len:%d)\n", msg->payloadlen);
         return;
     }
 
@@ -490,7 +534,17 @@ void receive_mqtt_packet(struct mosquitto *mosq, void *obj, const struct mosquit
         return;
     }
 
-    char *payload = (char *)msg->payload;
+    //*
+    char *payload = malloc(msg->payloadlen + 1);
+    if (!payload)
+    {
+        return;
+    }
+    memcpy(payload, msg->payload, msg->payloadlen);
+    payload[msg->payloadlen] = '\0';
+    //*/
+
+   // char *payload = (char *)msg->payload;
     printf("[HA] message: %s\n", payload);
 
     cJSON *root = cJSON_Parse(payload);
@@ -538,6 +592,7 @@ void receive_mqtt_packet(struct mosquitto *mosq, void *obj, const struct mosquit
     }
 
     cJSON_Delete(root);
+    free(payload);
 
     send_tcp_packet(id, power, brightness, warmth);
 }

@@ -48,27 +48,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/salgl/Documents/Projects/cozy_life_bulb
+CMAKE_SOURCE_DIR = /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/salgl/Documents/Projects/cozy_life_bulb/build
+CMAKE_BINARY_DIR = /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	"C:/Program Files/CMake/bin/cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:/Program Files/CMake/bin/cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles C:/Users/salgl/Documents/Projects/cozy_life_bulb/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,37 +129,13 @@ cozy_life_bulb/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/build
 .PHONY : cozy_life_bulb/fast
 
-cjson/cJSON.obj: cjson/cJSON.c.obj
-.PHONY : cjson/cJSON.obj
+main.o: main.c.o
+.PHONY : main.o
 
 # target to build an object file
-cjson/cJSON.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj
-.PHONY : cjson/cJSON.c.obj
-
-cjson/cJSON.i: cjson/cJSON.c.i
-.PHONY : cjson/cJSON.i
-
-# target to preprocess a source file
-cjson/cJSON.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.i
-.PHONY : cjson/cJSON.c.i
-
-cjson/cJSON.s: cjson/cJSON.c.s
-.PHONY : cjson/cJSON.s
-
-# target to generate assembly for a file
-cjson/cJSON.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.s
-.PHONY : cjson/cJSON.c.s
-
-main.obj: main.c.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/main.c.obj
-.PHONY : main.c.obj
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cozy_life_bulb.dir/build.make CMakeFiles/cozy_life_bulb.dir/main.c.o
+.PHONY : main.c.o
 
 main.i: main.c.i
 .PHONY : main.i
@@ -186,10 +162,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cozy_life_bulb"
-	@echo "... cjson/cJSON.obj"
-	@echo "... cjson/cJSON.i"
-	@echo "... cjson/cJSON.s"
-	@echo "... main.obj"
+	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 .PHONY : help

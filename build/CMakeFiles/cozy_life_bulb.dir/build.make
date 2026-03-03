@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "C:/Program Files/CMake/bin/cmake.exe"
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = "C:/Program Files/CMake/bin/cmake.exe" -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/salgl/Documents/Projects/cozy_life_bulb
+CMAKE_SOURCE_DIR = /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/salgl/Documents/Projects/cozy_life_bulb/build
+CMAKE_BINARY_DIR = /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cozy_life_bulb.dir/depend.make
@@ -72,56 +72,38 @@ include CMakeFiles/cozy_life_bulb.dir/flags.make
 CMakeFiles/cozy_life_bulb.dir/codegen:
 .PHONY : CMakeFiles/cozy_life_bulb.dir/codegen
 
-CMakeFiles/cozy_life_bulb.dir/main.c.obj: CMakeFiles/cozy_life_bulb.dir/flags.make
-CMakeFiles/cozy_life_bulb.dir/main.c.obj: CMakeFiles/cozy_life_bulb.dir/includes_C.rsp
-CMakeFiles/cozy_life_bulb.dir/main.c.obj: C:/Users/salgl/Documents/Projects/cozy_life_bulb/main.c
-CMakeFiles/cozy_life_bulb.dir/main.c.obj: CMakeFiles/cozy_life_bulb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cozy_life_bulb.dir/main.c.obj"
-	C:/c_toolchain/LLVM/bin/clang.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cozy_life_bulb.dir/main.c.obj -MF CMakeFiles/cozy_life_bulb.dir/main.c.obj.d -o CMakeFiles/cozy_life_bulb.dir/main.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/main.c
+CMakeFiles/cozy_life_bulb.dir/main.c.o: CMakeFiles/cozy_life_bulb.dir/flags.make
+CMakeFiles/cozy_life_bulb.dir/main.c.o: /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/main.c
+CMakeFiles/cozy_life_bulb.dir/main.c.o: CMakeFiles/cozy_life_bulb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cozy_life_bulb.dir/main.c.o"
+	/usr/bin/clang-18 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cozy_life_bulb.dir/main.c.o -MF CMakeFiles/cozy_life_bulb.dir/main.c.o.d -o CMakeFiles/cozy_life_bulb.dir/main.c.o -c /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/main.c
 
 CMakeFiles/cozy_life_bulb.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cozy_life_bulb.dir/main.c.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
+	/usr/bin/clang-18 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/main.c > CMakeFiles/cozy_life_bulb.dir/main.c.i
 
 CMakeFiles/cozy_life_bulb.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cozy_life_bulb.dir/main.c.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
-
-CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj: CMakeFiles/cozy_life_bulb.dir/flags.make
-CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj: CMakeFiles/cozy_life_bulb.dir/includes_C.rsp
-CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj: C:/Users/salgl/Documents/Projects/cozy_life_bulb/cjson/cJSON.c
-CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj: CMakeFiles/cozy_life_bulb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj"
-	C:/c_toolchain/LLVM/bin/clang.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj -MF CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj.d -o CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/cjson/cJSON.c
-
-CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_PREPROCESSED_SOURCE
-
-CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_C_CREATE_ASSEMBLY_SOURCE
+	/usr/bin/clang-18 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/main.c -o CMakeFiles/cozy_life_bulb.dir/main.c.s
 
 # Object files for target cozy_life_bulb
 cozy_life_bulb_OBJECTS = \
-"CMakeFiles/cozy_life_bulb.dir/main.c.obj" \
-"CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj"
+"CMakeFiles/cozy_life_bulb.dir/main.c.o"
 
 # External object files for target cozy_life_bulb
 cozy_life_bulb_EXTERNAL_OBJECTS =
 
-cozy_life_bulb.exe: CMakeFiles/cozy_life_bulb.dir/main.c.obj
-cozy_life_bulb.exe: CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj
-cozy_life_bulb.exe: CMakeFiles/cozy_life_bulb.dir/build.make
-cozy_life_bulb.exe: C:/Program\ Files/mosquitto/devel/mosquitto.lib
-cozy_life_bulb.exe: CMakeFiles/cozy_life_bulb.dir/linkLibs.rsp
-cozy_life_bulb.exe: CMakeFiles/cozy_life_bulb.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable cozy_life_bulb.exe"
-	C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cozy_life_bulb.dir/objects1.rsp -o cozy_life_bulb.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cozy_life_bulb.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/cozy_life_bulb.pdb -Xlinker /version:0.0  @CMakeFiles/cozy_life_bulb.dir/linkLibs.rsp
-	"C:/Program Files/CMake/bin/cmake.exe" -E copy_if_different "C:/Program Files/mosquitto/mosquitto.dll" "C:/Program Files/mosquitto/cjson.dll" "C:/Program Files/mosquitto/mosquitto_common.dll" "C:/Program Files/mosquitto/libssl-3-x64.dll" "C:/Program Files/mosquitto/libcrypto-3-x64.dll" "C:/Program Files/mosquitto/pthreadVC3.dll" C:/Users/salgl/Documents/Projects/cozy_life_bulb/build
+cozy_life_bulb: CMakeFiles/cozy_life_bulb.dir/main.c.o
+cozy_life_bulb: CMakeFiles/cozy_life_bulb.dir/build.make
+cozy_life_bulb: CMakeFiles/cozy_life_bulb.dir/compiler_depend.ts
+cozy_life_bulb: /usr/lib/x86_64-linux-gnu/libmosquitto.so
+cozy_life_bulb: /usr/lib/x86_64-linux-gnu/libcjson.so
+cozy_life_bulb: CMakeFiles/cozy_life_bulb.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable cozy_life_bulb"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cozy_life_bulb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/cozy_life_bulb.dir/build: cozy_life_bulb.exe
+CMakeFiles/cozy_life_bulb.dir/build: cozy_life_bulb
 .PHONY : CMakeFiles/cozy_life_bulb.dir/build
 
 CMakeFiles/cozy_life_bulb.dir/clean:
@@ -129,6 +111,6 @@ CMakeFiles/cozy_life_bulb.dir/clean:
 .PHONY : CMakeFiles/cozy_life_bulb.dir/clean
 
 CMakeFiles/cozy_life_bulb.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/salgl/Documents/Projects/cozy_life_bulb C:/Users/salgl/Documents/Projects/cozy_life_bulb C:/Users/salgl/Documents/Projects/cozy_life_bulb/build C:/Users/salgl/Documents/Projects/cozy_life_bulb/build C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/cozy_life_bulb.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/cozy_life_bulb.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/cozy_life_bulb.dir/depend
 

@@ -1,11 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj"
-  "CMakeFiles/cozy_life_bulb.dir/cjson/cJSON.c.obj.d"
-  "CMakeFiles/cozy_life_bulb.dir/main.c.obj"
-  "CMakeFiles/cozy_life_bulb.dir/main.c.obj.d"
-  "cozy_life_bulb.exe"
-  "cozy_life_bulb.exe.manifest"
-  "cozy_life_bulb.lib"
+  "CMakeFiles/cozy_life_bulb.dir/link.d"
+  "CMakeFiles/cozy_life_bulb.dir/main.c.o"
+  "CMakeFiles/cozy_life_bulb.dir/main.c.o.d"
+  "cozy_life_bulb"
   "cozy_life_bulb.pdb"
 )
 

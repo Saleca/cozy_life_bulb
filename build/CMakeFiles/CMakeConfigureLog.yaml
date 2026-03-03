@@ -4,20 +4,20 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Windows - 10.0.26200 - AMD64
+      The system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/c_toolchain/LLVM/bin/clang.exe 
+      Compiler: /usr/bin/clang-18 
       Build flags: 
       Id flags:  
       
@@ -25,1206 +25,207 @@ events:
       0
       
       
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is Clang, found in:
-        C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/3.31.1/CompilerIdC/a.exe
+        /mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/3.31.6/CompilerIdC/a.out
       
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    message: |
-      Detecting C compiler /showIncludes prefix:
-        
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    message: |
-      Detecting C compiler /showIncludes prefix:
-        
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    message: |
-      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/c_toolchain/LLVM/bin/clang++.exe 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      0
-      
-      
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
-      
-      The CXX compiler identification is Clang, found in:
-        C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/3.31.1/CompilerIdCXX/a.exe
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    message: |
-      Detecting CXX compiler /showIncludes prefix:
-        
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    message: |
-      Detecting CXX compiler /showIncludes prefix:
-        
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f"
+      source: "/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o"
+      binary: "/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f'
+        Change Dir: '/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_fc32c/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_fc32c.dir/build.make CMakeFiles/cmTC_fc32c.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f'
-        Building C object CMakeFiles/cmTC_fc32c.dir/CMakeCCompilerABI.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_fc32c.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles/cmTC_fc32c.dir/CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_fc32c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeCCompilerABI.c"
-        Linking C executable cmTC_fc32c.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd  -v -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_fc32c.dir/objects1.rsp -o cmTC_fc32c.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_fc32c.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f/cmTC_fc32c.pdb -Xlinker /version:0.0 
-        clang version 21.1.0
-        Target: x86_64-pc-windows-msvc
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f99f3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f99f3.dir/build.make CMakeFiles/cmTC_f99f3.dir/build
+        gmake[1]: Entering directory '/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o'
+        Building C object CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o
+        /usr/bin/clang-18   -v -MD -MT CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Debian clang version 18.1.8 (18+b1)
+        Target: x86_64-pc-linux-gnu
         Thread model: posix
-        InstalledDir: C:\\c_toolchain\\LLVM\\bin
-         "C:\\\\c_toolchain\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_fc32c.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.42.34433\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.42.34433\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:C:\\\\c_toolchain\\\\LLVM\\\\lib\\\\clang\\\\21\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_fc32c.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_fc32c.lib /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f/cmTC_fc32c.pdb /version:0.0
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-vjet6f'
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
+        Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o -v -fcoverage-compilation-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang -v -MD -MT CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-pc-linux-gnu
+        ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/llvm-18/lib/clang/18/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Linking C executable cmTC_f99f3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f99f3.dir/link.txt --verbose=1
+        Debian clang version 18.1.8 (18+b1)
+        Target: x86_64-pc-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
+        Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f99f3 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Debian) 2.44
+        /usr/bin/clang-18  -v -Wl,-v CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -o cmTC_f99f3
+        gmake[1]: Leaving directory '/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/llvm-18/lib/clang/18/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/llvm-18/lib/clang/18/include] ==> [/usr/lib/llvm-18/lib/clang/18/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/llvm-18/lib/clang/18/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/c_toolchain/LLVM/bin/lld-link
-        implicit libs: []
-        implicit objs: []
-        implicit dirs: []
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f99f3/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f99f3.dir/build.make CMakeFiles/cmTC_f99f3.dir/build]
+        ignore line: [gmake[1]: Entering directory '/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o']
+        ignore line: [Building C object CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/clang-18   -v -MD -MT CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Debian clang version 18.1.8 (18+b1)]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o -v -fcoverage-compilation-dir=/mnt/c/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-661j6o -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -dwarf-debug-flags "/usr/lib/llvm-18/bin/clang -v -MD -MT CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c" -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-pc-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/llvm-18/lib/clang/18/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_f99f3]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f99f3.dir/link.txt --verbose=1]
+        ignore line: [Debian clang version 18.1.8 (18+b1)]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f99f3 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_f99f3] ==> ignore
+          arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
+          arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o]
+          arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/14] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/14]
+          arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_f99f3.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o]
+          arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtbeginS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o]
+        collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/crtendS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o]
+        collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/14] ==> [/usr/lib/gcc/x86_64-linux-gnu/14]
+        collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib/x86_64-linux-gnu/Scrt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o;/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/14;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/lib;/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "/usr/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
     message: |
-      Running the C compiler's linker: "C:/c_toolchain/LLVM/bin/lld-link" "-v"
-      lld-link: warning: ignoring unknown argument '-v'
-      lld-link: error: no input files
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Running the C compiler's linker: "C:/c_toolchain/LLVM/bin/lld-link" "-V"
-      lld-link: warning: ignoring unknown argument '-V'
-      lld-link: error: no input files
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Running the C compiler's linker: "C:/c_toolchain/LLVM/bin/lld-link" "--version"
-      LLD 21.1.0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    checks:
-      - "Detecting CXX compiler ABI info"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
-    buildResult:
-      variable: "CMAKE_CXX_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_9ca29/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_9ca29.dir/build.make CMakeFiles/cmTC_9ca29.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz'
-        Building CXX object CMakeFiles/cmTC_9ca29.dir/CMakeCXXCompilerABI.cpp.obj
-        C:/c_toolchain/LLVM/bin/clang++.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_9ca29.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_9ca29.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_9ca29.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp"
-        Linking CXX executable cmTC_9ca29.exe
-        C:/c_toolchain/LLVM/bin/clang++.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd  -v -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_9ca29.dir/objects1.rsp -o cmTC_9ca29.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_9ca29.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz/cmTC_9ca29.pdb -Xlinker /version:0.0 
-        clang version 21.1.0
-        Target: x86_64-pc-windows-msvc
-        Thread model: posix
-        InstalledDir: C:\\c_toolchain\\LLVM\\bin
-         "C:\\\\c_toolchain\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_9ca29.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.42.34433\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.42.34433\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:C:\\\\c_toolchain\\\\LLVM\\\\lib\\\\clang\\\\21\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_9ca29.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_9ca29.lib /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz/cmTC_9ca29.pdb /version:0.0
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-c2g5sz'
-        
-      exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/c_toolchain/LLVM/bin/lld-link
-        implicit libs: []
-        implicit objs: []
-        implicit dirs: []
-        implicit fwks: []
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Running the CXX compiler's linker: "C:/c_toolchain/LLVM/bin/lld-link" "-v"
-      lld-link: warning: ignoring unknown argument '-v'
-      lld-link: error: no input files
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Running the CXX compiler's linker: "C:/c_toolchain/LLVM/bin/lld-link" "-V"
-      lld-link: warning: ignoring unknown argument '-V'
-      lld-link: error: no input files
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Running the CXX compiler's linker: "C:/c_toolchain/LLVM/bin/lld-link" "--version"
-      LLD 21.1.0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake:87 (_record_compiler_features)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake:124 (_record_compiler_features_cxx)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake:70 (cmake_record_cxx_compile_features)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:83 (CMAKE_DETERMINE_COMPILER_SUPPORT)"
-      - "CMakeLists.txt"
-    checks:
-      - "Detecting CXX compile features"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_CXX_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_CXX_FEATURE_TEST"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_c5c45/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_c5c45.dir/build.make CMakeFiles/cmTC_c5c45.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b'
-        Building CXX object CMakeFiles/cmTC_c5c45.dir/feature_tests.cxx.obj
-        C:/c_toolchain/LLVM/bin/clang++.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_c5c45.dir/feature_tests.cxx.obj -MF CMakeFiles/cmTC_c5c45.dir/feature_tests.cxx.obj.d -o CMakeFiles/cmTC_c5c45.dir/feature_tests.cxx.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b/feature_tests.cxx
-        Linking CXX executable cmTC_c5c45.exe
-        C:/c_toolchain/LLVM/bin/clang++.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_c5c45.dir/objects1.rsp -o cmTC_c5c45.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_c5c45.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b/cmTC_c5c45.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_c5c45.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-in8b7b'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake:87 (_record_compiler_features)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake:132 (_record_compiler_features_cxx)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake:70 (cmake_record_cxx_compile_features)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:83 (CMAKE_DETERMINE_COMPILER_SUPPORT)"
-      - "CMakeLists.txt"
-    checks:
-      - "Detecting CXX compile features"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_CXX_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_CXX_FEATURE_TEST"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_0be83/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_0be83.dir/build.make CMakeFiles/cmTC_0be83.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb'
-        Building CXX object CMakeFiles/cmTC_0be83.dir/feature_tests.cxx.obj
-        C:/c_toolchain/LLVM/bin/clang++.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_0be83.dir/feature_tests.cxx.obj -MF CMakeFiles/cmTC_0be83.dir/feature_tests.cxx.obj.d -o CMakeFiles/cmTC_0be83.dir/feature_tests.cxx.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb/feature_tests.cxx
-        Linking CXX executable cmTC_0be83.exe
-        C:/c_toolchain/LLVM/bin/clang++.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_0be83.dir/objects1.rsp -o cmTC_0be83.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_0be83.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb/cmTC_0be83.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_0be83.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tytrxb'
-        
-      exitCode: 0
-...
-
----
-events:
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_stdc89"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: ""
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_stdc89"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_9340d/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_9340d.dir/build.make CMakeFiles/cmTC_9340d.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7'
-        Building C object CMakeFiles/cmTC_9340d.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_stdc89  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c89 -MD -MT CMakeFiles/cmTC_9340d.dir/src.c.obj -MF CMakeFiles/cmTC_9340d.dir/src.c.obj.d -o CMakeFiles/cmTC_9340d.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7/src.c
-        Linking C executable cmTC_9340d.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_9340d.dir/objects1.rsp -o cmTC_9340d.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_9340d.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7/cmTC_9340d.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_9340d.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-9artq7'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_pedantic"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_pedantic"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_6cd29/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_6cd29.dir/build.make CMakeFiles/cmTC_6cd29.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj'
-        Building C object CMakeFiles/cmTC_6cd29.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_pedantic  -std=c89  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -pedantic -MD -MT CMakeFiles/cmTC_6cd29.dir/src.c.obj -MF CMakeFiles/cmTC_6cd29.dir/src.c.obj.d -o CMakeFiles/cmTC_6cd29.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj/src.c
-        Linking C executable cmTC_6cd29.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_6cd29.dir/objects1.rsp -o cmTC_6cd29.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_6cd29.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj/cmTC_6cd29.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_6cd29.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-ran4qj'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wall"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wall"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_a3f69/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_a3f69.dir/build.make CMakeFiles/cmTC_a3f69.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6'
-        Building C object CMakeFiles/cmTC_a3f69.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wall  -std=c89 -pedantic  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wall -MD -MT CMakeFiles/cmTC_a3f69.dir/src.c.obj -MF CMakeFiles/cmTC_a3f69.dir/src.c.obj.d -o CMakeFiles/cmTC_a3f69.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6/src.c
-        Linking C executable cmTC_a3f69.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_a3f69.dir/objects1.rsp -o cmTC_a3f69.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_a3f69.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6/cmTC_a3f69.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_a3f69.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pzepb6'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wextra"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wextra"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_5919e/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_5919e.dir/build.make CMakeFiles/cmTC_5919e.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb'
-        Building C object CMakeFiles/cmTC_5919e.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wextra  -std=c89 -pedantic -Wall  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wextra -MD -MT CMakeFiles/cmTC_5919e.dir/src.c.obj -MF CMakeFiles/cmTC_5919e.dir/src.c.obj.d -o CMakeFiles/cmTC_5919e.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb/src.c
-        Linking C executable cmTC_5919e.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_5919e.dir/objects1.rsp -o cmTC_5919e.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_5919e.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb/cmTC_5919e.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_5919e.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bzydzb'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Werror"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Werror"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_d1326/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_d1326.dir/build.make CMakeFiles/cmTC_d1326.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw'
-        Building C object CMakeFiles/cmTC_d1326.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Werror  -std=c89 -pedantic -Wall -Wextra  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Werror -MD -MT CMakeFiles/cmTC_d1326.dir/src.c.obj -MF CMakeFiles/cmTC_d1326.dir/src.c.obj.d -o CMakeFiles/cmTC_d1326.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw/src.c
-        Linking C executable cmTC_d1326.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_d1326.dir/objects1.rsp -o cmTC_d1326.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_d1326.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw/cmTC_d1326.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_d1326.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-5hobhw'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wstrictprototypes"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wstrictprototypes"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_3ef56/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_3ef56.dir/build.make CMakeFiles/cmTC_3ef56.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr'
-        Building C object CMakeFiles/cmTC_3ef56.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wstrictprototypes  -std=c89 -pedantic -Wall -Wextra -Werror  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wstrict-prototypes -MD -MT CMakeFiles/cmTC_3ef56.dir/src.c.obj -MF CMakeFiles/cmTC_3ef56.dir/src.c.obj.d -o CMakeFiles/cmTC_3ef56.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr/src.c
-        Linking C executable cmTC_3ef56.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_3ef56.dir/objects1.rsp -o cmTC_3ef56.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_3ef56.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr/cmTC_3ef56.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_3ef56.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-k5coxr'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wwritestrings"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wwritestrings"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_7d30e/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_7d30e.dir/build.make CMakeFiles/cmTC_7d30e.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk'
-        Building C object CMakeFiles/cmTC_7d30e.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wwritestrings  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wwrite-strings -MD -MT CMakeFiles/cmTC_7d30e.dir/src.c.obj -MF CMakeFiles/cmTC_7d30e.dir/src.c.obj.d -o CMakeFiles/cmTC_7d30e.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk/src.c
-        Linking C executable cmTC_7d30e.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_7d30e.dir/objects1.rsp -o cmTC_7d30e.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_7d30e.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk/cmTC_7d30e.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_7d30e.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-52ysjk'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wshadow"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wshadow"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_02863/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_02863.dir/build.make CMakeFiles/cmTC_02863.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu'
-        Building C object CMakeFiles/cmTC_02863.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wshadow  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wshadow -MD -MT CMakeFiles/cmTC_02863.dir/src.c.obj -MF CMakeFiles/cmTC_02863.dir/src.c.obj.d -o CMakeFiles/cmTC_02863.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu/src.c
-        Linking C executable cmTC_02863.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_02863.dir/objects1.rsp -o cmTC_02863.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_02863.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu/cmTC_02863.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_02863.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m2ycuu'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Winitself"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Winitself"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_44e52/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_44e52.dir/build.make CMakeFiles/cmTC_44e52.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf'
-        Building C object CMakeFiles/cmTC_44e52.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Winitself  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Winit-self -MD -MT CMakeFiles/cmTC_44e52.dir/src.c.obj -MF CMakeFiles/cmTC_44e52.dir/src.c.obj.d -o CMakeFiles/cmTC_44e52.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf/src.c
-        Linking C executable cmTC_44e52.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_44e52.dir/objects1.rsp -o cmTC_44e52.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_44e52.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf/cmTC_44e52.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_44e52.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-4j8wmf'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wcastalign"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wcastalign"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_d3060/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_d3060.dir/build.make CMakeFiles/cmTC_d3060.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx'
-        Building C object CMakeFiles/cmTC_d3060.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wcastalign  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wcast-align -MD -MT CMakeFiles/cmTC_d3060.dir/src.c.obj -MF CMakeFiles/cmTC_d3060.dir/src.c.obj.d -o CMakeFiles/cmTC_d3060.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx/src.c
-        Linking C executable cmTC_d3060.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_d3060.dir/objects1.rsp -o cmTC_d3060.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_d3060.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx/cmTC_d3060.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_d3060.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-1h43dx'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wformat2"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wformat2"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_164e3/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_164e3.dir/build.make CMakeFiles/cmTC_164e3.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp'
-        Building C object CMakeFiles/cmTC_164e3.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wformat2  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wformat=2 -MD -MT CMakeFiles/cmTC_164e3.dir/src.c.obj -MF CMakeFiles/cmTC_164e3.dir/src.c.obj.d -o CMakeFiles/cmTC_164e3.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp/src.c
-        Linking C executable cmTC_164e3.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_164e3.dir/objects1.rsp -o cmTC_164e3.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_164e3.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp/cmTC_164e3.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_164e3.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-a66mmp'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wmissingprototypes"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wmissingprototypes"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_e3667/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_e3667.dir/build.make CMakeFiles/cmTC_e3667.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny'
-        Building C object CMakeFiles/cmTC_e3667.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wmissingprototypes  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wmissing-prototypes -MD -MT CMakeFiles/cmTC_e3667.dir/src.c.obj -MF CMakeFiles/cmTC_e3667.dir/src.c.obj.d -o CMakeFiles/cmTC_e3667.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny/src.c
-        Linking C executable cmTC_e3667.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_e3667.dir/objects1.rsp -o cmTC_e3667.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_e3667.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny/cmTC_e3667.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_e3667.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-v8tbny'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wstrictoverflow2"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wstrictoverflow2"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_f2e5a/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_f2e5a.dir/build.make CMakeFiles/cmTC_f2e5a.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11'
-        Building C object CMakeFiles/cmTC_f2e5a.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wstrictoverflow2  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wstrict-overflow=2 -MD -MT CMakeFiles/cmTC_f2e5a.dir/src.c.obj -MF CMakeFiles/cmTC_f2e5a.dir/src.c.obj.d -o CMakeFiles/cmTC_f2e5a.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11/src.c
-        Linking C executable cmTC_f2e5a.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_f2e5a.dir/objects1.rsp -o cmTC_f2e5a.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_f2e5a.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11/cmTC_f2e5a.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_f2e5a.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-q5ue11'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wcastqual"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wcastqual"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_29461/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_29461.dir/build.make CMakeFiles/cmTC_29461.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr'
-        Building C object CMakeFiles/cmTC_29461.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wcastqual  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wcast-qual -MD -MT CMakeFiles/cmTC_29461.dir/src.c.obj -MF CMakeFiles/cmTC_29461.dir/src.c.obj.d -o CMakeFiles/cmTC_29461.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr/src.c
-        Linking C executable cmTC_29461.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_29461.dir/objects1.rsp -o cmTC_29461.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_29461.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr/cmTC_29461.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_29461.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-tlxukr'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wundef"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wundef"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_9c410/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_9c410.dir/build.make CMakeFiles/cmTC_9c410.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0'
-        Building C object CMakeFiles/cmTC_9c410.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wundef  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wundef -MD -MT CMakeFiles/cmTC_9c410.dir/src.c.obj -MF CMakeFiles/cmTC_9c410.dir/src.c.obj.d -o CMakeFiles/cmTC_9c410.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0/src.c
-        Linking C executable cmTC_9c410.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_9c410.dir/objects1.rsp -o cmTC_9c410.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_9c410.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0/cmTC_9c410.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_9c410.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-n2q0d0'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wswitchdefault"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wswitchdefault"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_55895/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_55895.dir/build.make CMakeFiles/cmTC_55895.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413'
-        Building C object CMakeFiles/cmTC_55895.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wswitchdefault  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wswitch-default -MD -MT CMakeFiles/cmTC_55895.dir/src.c.obj -MF CMakeFiles/cmTC_55895.dir/src.c.obj.d -o CMakeFiles/cmTC_55895.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413/src.c
-        Linking C executable cmTC_55895.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_55895.dir/objects1.rsp -o cmTC_55895.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_55895.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413/cmTC_55895.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_55895.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-jox413'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wconversion"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wconversion"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_4951b/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_4951b.dir/build.make CMakeFiles/cmTC_4951b.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv'
-        Building C object CMakeFiles/cmTC_4951b.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wconversion  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wconversion -MD -MT CMakeFiles/cmTC_4951b.dir/src.c.obj -MF CMakeFiles/cmTC_4951b.dir/src.c.obj.d -o CMakeFiles/cmTC_4951b.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv/src.c
-        Linking C executable cmTC_4951b.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_4951b.dir/objects1.rsp -o cmTC_4951b.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_4951b.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv/cmTC_4951b.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_4951b.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-zfb4dv'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wccompat"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wccompat"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_de7b4/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_de7b4.dir/build.make CMakeFiles/cmTC_de7b4.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi'
-        Building C object CMakeFiles/cmTC_de7b4.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wccompat  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wc++-compat -MD -MT CMakeFiles/cmTC_de7b4.dir/src.c.obj -MF CMakeFiles/cmTC_de7b4.dir/src.c.obj.d -o CMakeFiles/cmTC_de7b4.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi/src.c
-        Linking C executable cmTC_de7b4.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_de7b4.dir/objects1.rsp -o cmTC_de7b4.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_de7b4.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi/cmTC_de7b4.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_de7b4.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-22q7xi'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_fstackprotectorstrong"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_fstackprotectorstrong"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_ff366/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_ff366.dir/build.make CMakeFiles/cmTC_ff366.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1'
-        Building C object CMakeFiles/cmTC_ff366.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_fstackprotectorstrong  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -fstack-protector-strong -MD -MT CMakeFiles/cmTC_ff366.dir/src.c.obj -MF CMakeFiles/cmTC_ff366.dir/src.c.obj.d -o CMakeFiles/cmTC_ff366.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1/src.c
-        Linking C executable cmTC_ff366.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_ff366.dir/objects1.rsp -o cmTC_ff366.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_ff366.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1/cmTC_ff366.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_ff366.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-io3ct1'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wcomma"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wcomma"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_dc34b/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_dc34b.dir/build.make CMakeFiles/cmTC_dc34b.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk'
-        Building C object CMakeFiles/cmTC_dc34b.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wcomma  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wcomma -MD -MT CMakeFiles/cmTC_dc34b.dir/src.c.obj -MF CMakeFiles/cmTC_dc34b.dir/src.c.obj.d -o CMakeFiles/cmTC_dc34b.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk/src.c
-        Linking C executable cmTC_dc34b.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_dc34b.dir/objects1.rsp -o cmTC_dc34b.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_dc34b.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk/cmTC_dc34b.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_dc34b.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-3ivfnk'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wdoublepromotion"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wdoublepromotion"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_b9642/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_b9642.dir/build.make CMakeFiles/cmTC_b9642.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i'
-        Building C object CMakeFiles/cmTC_b9642.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wdoublepromotion  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wdouble-promotion -MD -MT CMakeFiles/cmTC_b9642.dir/src.c.obj -MF CMakeFiles/cmTC_b9642.dir/src.c.obj.d -o CMakeFiles/cmTC_b9642.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i/src.c
-        Linking C executable cmTC_b9642.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_b9642.dir/objects1.rsp -o cmTC_b9642.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_b9642.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i/cmTC_b9642.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_b9642.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-poxp2i'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wparentheses"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wparentheses"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_87405/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_87405.dir/build.make CMakeFiles/cmTC_87405.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt'
-        Building C object CMakeFiles/cmTC_87405.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wparentheses  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wparentheses -MD -MT CMakeFiles/cmTC_87405.dir/src.c.obj -MF CMakeFiles/cmTC_87405.dir/src.c.obj.d -o CMakeFiles/cmTC_87405.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt/src.c
-        Linking C executable cmTC_87405.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_87405.dir/objects1.rsp -o cmTC_87405.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_87405.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt/cmTC_87405.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_87405.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-pwmqrt'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wformatoverflow"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wformatoverflow"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_898be/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_898be.dir/build.make CMakeFiles/cmTC_898be.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly'
-        Building C object CMakeFiles/cmTC_898be.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wformatoverflow  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wformat-overflow -MD -MT CMakeFiles/cmTC_898be.dir/src.c.obj -MF CMakeFiles/cmTC_898be.dir/src.c.obj.d -o CMakeFiles/cmTC_898be.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly/src.c
-        Linking C executable cmTC_898be.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_898be.dir/objects1.rsp -o cmTC_898be.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_898be.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly/cmTC_898be.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_898be.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-amcyly'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wunusedmacros"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wunusedmacros"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_6c3ed/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_6c3ed.dir/build.make CMakeFiles/cmTC_6c3ed.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i'
-        Building C object CMakeFiles/cmTC_6c3ed.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wunusedmacros  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wunused-macros -MD -MT CMakeFiles/cmTC_6c3ed.dir/src.c.obj -MF CMakeFiles/cmTC_6c3ed.dir/src.c.obj.d -o CMakeFiles/cmTC_6c3ed.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i/src.c
-        Linking C executable cmTC_6c3ed.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_6c3ed.dir/objects1.rsp -o cmTC_6c3ed.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_6c3ed.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i/cmTC_6c3ed.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_6c3ed.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-g3v17i'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wmissingvariabledeclarations"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wmissingvariabledeclarations"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_38849/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_38849.dir/build.make CMakeFiles/cmTC_38849.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843'
-        Building C object CMakeFiles/cmTC_38849.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wmissingvariabledeclarations  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wmissing-variable-declarations -MD -MT CMakeFiles/cmTC_38849.dir/src.c.obj -MF CMakeFiles/cmTC_38849.dir/src.c.obj.d -o CMakeFiles/cmTC_38849.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843/src.c
-        Linking C executable cmTC_38849.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_38849.dir/objects1.rsp -o cmTC_38849.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_38849.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843/cmTC_38849.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_38849.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-m1y843'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wusedbutmarkedunused"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wusedbutmarkedunused"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_c7879/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_c7879.dir/build.make CMakeFiles/cmTC_c7879.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1'
-        Building C object CMakeFiles/cmTC_c7879.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wusedbutmarkedunused  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wused-but-marked-unused -MD -MT CMakeFiles/cmTC_c7879.dir/src.c.obj -MF CMakeFiles/cmTC_c7879.dir/src.c.obj.d -o CMakeFiles/cmTC_c7879.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1/src.c
-        Linking C executable cmTC_c7879.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_c7879.dir/objects1.rsp -o cmTC_c7879.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_c7879.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1/cmTC_c7879.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_c7879.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-u012h1'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_Wswitchenum"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations -Wused-but-marked-unused"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_Wswitchenum"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_8abe0/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_8abe0.dir/build.make CMakeFiles/cmTC_8abe0.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4'
-        Building C object CMakeFiles/cmTC_8abe0.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_Wswitchenum  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations -Wused-but-marked-unused  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -Wswitch-enum -MD -MT CMakeFiles/cmTC_8abe0.dir/src.c.obj -MF CMakeFiles/cmTC_8abe0.dir/src.c.obj.d -o CMakeFiles/cmTC_8abe0.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4/src.c
-        Linking C executable cmTC_8abe0.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations -Wused-but-marked-unused  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_8abe0.dir/objects1.rsp -o cmTC_8abe0.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_8abe0.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4/cmTC_8abe0.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_8abe0.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-bq6uf4'
-        
-      exitCode: 0
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
-      - "build/_deps/cjson-src/CMakeLists.txt:102 (CHECK_C_COMPILER_FLAG)"
-    checks:
-      - "Performing Test FLAG_SUPPORTED_fvisibilityhidden"
-    directories:
-      source: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih"
-      binary: "C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih"
-    cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/c_toolchain/LLVM/bin/clang-scan-deps.exe"
-      CMAKE_C_FLAGS: " -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations -Wused-but-marked-unused -Wswitch-enum"
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "FLAG_SUPPORTED_fvisibilityhidden"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih'
-        
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/raylib/w64devkit/bin/make.exe -f Makefile cmTC_18a5f/fast
-        C:/raylib/w64devkit/bin/make.exe  -f CMakeFiles/cmTC_18a5f.dir/build.make CMakeFiles/cmTC_18a5f.dir/build
-        make[1]: Entering directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih'
-        Building C object CMakeFiles/cmTC_18a5f.dir/src.c.obj
-        C:/c_toolchain/LLVM/bin/clang.exe -DFLAG_SUPPORTED_fvisibilityhidden  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations -Wused-but-marked-unused -Wswitch-enum  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_18a5f.dir/src.c.obj -MF CMakeFiles/cmTC_18a5f.dir/src.c.obj.d -o CMakeFiles/cmTC_18a5f.dir/src.c.obj -c C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih/src.c
-        Linking C executable cmTC_18a5f.exe
-        C:/c_toolchain/LLVM/bin/clang.exe -nostartfiles -nostdlib  -std=c89 -pedantic -Wall -Wextra -Werror -Wstrict-prototypes -Wwrite-strings -Wshadow -Winit-self -Wcast-align -Wformat=2 -Wmissing-prototypes -Wstrict-overflow=2 -Wcast-qual -Wundef -Wswitch-default -Wconversion -Wc++-compat -fstack-protector-strong -Wcomma -Wdouble-promotion -Wparentheses -Wformat-overflow -Wunused-macros -Wmissing-variable-declarations -Wused-but-marked-unused -Wswitch-enum  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link @CMakeFiles/cmTC_18a5f.dir/objects1.rsp -o cmTC_18a5f.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_18a5f.lib -Xlinker /pdb:C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih/cmTC_18a5f.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_18a5f.dir/linkLibs.rsp
-        make[1]: Leaving directory 'C:/Users/salgl/Documents/Projects/cozy_life_bulb/build/CMakeFiles/CMakeScratch/TryCompile-emofih'
-        
-      exitCode: 0
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Debian) 2.44
 ...
