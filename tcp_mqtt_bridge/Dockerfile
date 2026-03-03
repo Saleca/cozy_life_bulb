@@ -1,17 +1,25 @@
-FROM ghcr.io/home-assistant/aarch64-base:latest
+# Stage 1: The Builder
+FROM ghcr.io/home-assistant/aarch64-base:latest AS builder
 
-# 1. Install build tools
-RUN apk add --no-cache build-base cmake
+# Install build tools AND the mosquitto development headers
+RUN apk add --no-cache build-base cmake mosquitto-dev
 
-# 2. Copy your code and build it
 COPY . /app
 WORKDIR /app/build
-RUN cmake .. && make
 
-# 3. Move the finished program to a standard location
-RUN cp cozy_life_bulb /usr/local/bin/
+# Build using CMake
+RUN cmake .. && make -j1
 
-# 4. Setup the startup script
+# Stage 2: The Runner (RPi 4)
+FROM ghcr.io/home-assistant/aarch64-base:latest
+
+# IMPORTANT: You must install the library here too, or the app won't start
+RUN apk add --no-cache mosquitto-libs
+
+# Copy the binary from the builder
+COPY --from=builder /app/build/cozy_life_bulb /usr/local/bin/
+
+# Copy your startup script
 COPY run.sh /
 RUN chmod +x /run.sh
 
