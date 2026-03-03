@@ -1,6 +1,6 @@
 name: Cozy Life Bulb
 description: "scans and configures cozy life bulbs on the network"
-version: "0.1.7"
+version: "0.1.8"
 slug: tcp_mqtt_bridge
 init: false
 network_mode: host

@@ -274,14 +274,13 @@ void scan_network()
     {
         int current_socket = temp_sockets[i];
 
-        printf("socket %D\n", current_socket);
         if (current_socket < 0)
         {
             continue;
         }
 
         bool found = false;
-        if (confirm_tcp_connection(current_socket, 1))
+        if (confirm_tcp_connection(current_socket, 10))
         {
             if (device_count < 16)
             {
@@ -291,10 +290,6 @@ void scan_network()
                 printf("Found light at: %s\n", device_ips[device_count - 1]);
                 found = true;
             }
-        }
-        else
-        {
-            printf("not valid\n");
         }
 
         if (!found)
