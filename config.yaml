@@ -1,0 +1,10 @@
+name: "Cozy Life Bulb"
+description: "scans and configures cozy life bulbs on the network"
+version: "0.1.0"
+slug: "cozy_life_bulb"
+arch:
+  - aarch64
+  - armhf
+  - amd64
+network:
+  - 5555/tcp
