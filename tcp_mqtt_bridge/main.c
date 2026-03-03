@@ -22,7 +22,7 @@
 #define SUBNET_PREFIX "192.168.1."
 #define HA_IP SUBNET_PREFIX "120"
 #define SLEEP_TIMEOUT_US 10000
-#define SCAN_TIMEOUT_MS 500
+#define SCAN_TIMEOUT_MS 250
 #define RECONNECTION_TIMEOUT_S 60
 
 #define BULB_PAYLOAD "{\"msg\":{\"data\":{\"1\":%d,\"2\":0,\"3\":%d,\"4\":%d,\"5\":65535,\"6\":65535},\"attr\":[1,2,3,4,5,6]},\"pv\":0,\"cmd\":3,\"sn\":\"%lld\",\"res\":0}\n"
@@ -238,7 +238,6 @@ void scan_network()
         temp_sockets[i] = -1;
     }
 
-    int max_fd = -1;
     fd_set write_set;
     FD_ZERO(&write_set);
 
@@ -252,19 +251,10 @@ void scan_network()
         if (temp_sockets[i] >= 0)
         {
             FD_SET(temp_sockets[i], &write_set);
-            if (temp_sockets[i] > max_fd)
-            {
-                max_fd = temp_sockets[i];
-            }
         }
     }
 
-    if (max_fd == -1)
-    {
-        return;
-    }
-
-    usleep(1000000);
+    usleep(200 * 1000);
 
     for (int i = 1; i < 255; i++)
     {
