@@ -268,13 +268,13 @@ void scan_network()
         return;
     }
 
-    usleep(300000);
+    usleep(500000);
 
     for (int i = 1; i < 255; i++)
     {
         int current_socket = temp_sockets[i];
 
-        printf("socket %D", current_socket);
+        printf("socket %D\n", current_socket);
         if (current_socket < 0)
         {
             continue;
@@ -294,7 +294,7 @@ void scan_network()
         }
         else
         {
-            printf("not valid");
+            printf("not valid\n");
         }
 
         if (!found)
