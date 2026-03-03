@@ -234,7 +234,9 @@ void scan_network()
 {
     int temp_sockets[256];
     for (int i = 0; i < 256; i++)
+    {
         temp_sockets[i] = -1;
+    }
 
     int max_fd = -1;
     fd_set write_set;
@@ -262,7 +264,7 @@ void scan_network()
         return;
     }
 
-    usleep(500000);
+    usleep(1000000);
 
     for (int i = 1; i < 255; i++)
     {
