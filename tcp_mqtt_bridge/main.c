@@ -246,7 +246,7 @@ void scan_network()
     fd_set write_set;
     FD_ZERO(&write_set);
 
-    printf("Scanning network...\n", SUBNET_PREFIX);
+    printf("Scanning network...\n");
     for (int i = 1; i < 255; i++)
     {
         char ip[16];
