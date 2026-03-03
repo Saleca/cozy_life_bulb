@@ -2,7 +2,7 @@
 FROM ghcr.io/home-assistant/aarch64-base:latest AS builder
 
 # Install build tools AND the mosquitto development headers
-RUN apk add --no-cache build-base cmake mosquitto-dev
+RUN apk add --no-cache build-base cmake mosquitto-dev cjson-dev
 
 COPY . /app
 WORKDIR /app/build
@@ -14,7 +14,7 @@ RUN cmake .. && make -j1
 FROM ghcr.io/home-assistant/aarch64-base:latest
 
 # IMPORTANT: You must install the library here too, or the app won't start
-RUN apk add --no-cache mosquitto-libs
+RUN apk add --no-cache mosquitto-libs cjson
 
 # Copy the binary from the builder
 COPY --from=builder /app/build/cozy_life_bulb /usr/local/bin/
