@@ -1,8 +1,6 @@
-name: "Cozy Life Bulb"
+name: Cozy Life Bulb
 description: "scans and configures cozy life bulbs on the network"
 version: "0.1.0"
-slug: "tcp_mqtt_bridge"
+slug: tcp_mqtt_bridge
 arch:
   - aarch64
-  - armhf
-  - amd64

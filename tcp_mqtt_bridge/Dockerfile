@@ -1,37 +1,17 @@
-FROM ghcr.io/home-assistant/amd64-base:latest AS builder
+FROM ghcr.io/home-assistant/aarch64-base:latest
 
-# Install build dependencies for Alpine
-RUN apk add --no-cache \
-    build-base \
-    cmake \
-    clang \
-    git \
-    curl
+# 1. Install build tools
+RUN apk add --no-cache build-base cmake
 
-# Set Clang as the compiler
-ENV CC=clang
-
+# 2. Copy your code and build it
 COPY . /app
 WORKDIR /app/build
-
-# Build the project
 RUN cmake .. && make
 
-# Stage 2: Final Image
-FROM ghcr.io/home-assistant/amd64-base:latest
+# 3. Move the finished program to a standard location
+RUN cp cozy_life_bulb /usr/local/bin/
 
-# Labels help the Supervisor identify the addon
-LABEL \
-  io.hass.name="Cozy Life Bulb" \
-  io.hass.description="Scans and configures cozy life bulbs" \
-  io.hass.arch="amd64" \
-  io.hass.type="addon" \
-  io.hass.version="0.1.0"
-
-# Copy the binary from the builder stage
-COPY --from=builder /app/build/cozy_life_bulb /usr/local/bin/
-
-# Copy the startup script
+# 4. Setup the startup script
 COPY run.sh /
 RUN chmod +x /run.sh
 
