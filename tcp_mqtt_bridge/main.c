@@ -204,6 +204,7 @@ bool confirm_tcp_connection(int current_socket, int timeout_ms)
 {
     if (current_socket < 0)
     {
+        printf("[DEBUG] invalid socket %d\n", current_socket);
         return false;
     }
 
@@ -213,8 +214,17 @@ bool confirm_tcp_connection(int current_socket, int timeout_ms)
 
     struct timeval tv = {.tv_sec = 0, .tv_usec = timeout_ms * 1000};
 
-    if (select(current_socket + 1, NULL, &wset, NULL, &tv) <= 0)
+    int err = select(current_socket + 1, NULL, &wset, NULL, &tv);
+    if (err <= 0)
     {
+        if (err == 0)
+        {
+            printf("[DEBUG] Select timeout at %d\n", current_socket);
+        }
+        else
+        {
+            printf("[DEBUG] Select Error at %d: %s\n", current_socket, strerror(errno));
+        }
         return false;
     }
 
@@ -222,6 +232,7 @@ bool confirm_tcp_connection(int current_socket, int timeout_ms)
     socklen_t len = sizeof(so_error);
     if (getsockopt(current_socket, SOL_SOCKET, SO_ERROR, &so_error, &len) < 0 || so_error != 0)
     {
+        printf("[DEBUG] connection refused at %d\n", current_socket);
         return false;
     }
 
@@ -238,9 +249,6 @@ void scan_network()
         temp_sockets[i] = -1;
     }
 
-    fd_set write_set;
-    FD_ZERO(&write_set);
-
     printf("Scanning network...\n");
     for (int i = 1; i < 255; i++)
     {
@@ -248,10 +256,7 @@ void scan_network()
         snprintf(ip, sizeof(ip), "%s%d", SUBNET_PREFIX, i);
 
         temp_sockets[i] = start_tcp_connection(ip);
-        if (temp_sockets[i] >= 0)
-        {
-            FD_SET(temp_sockets[i], &write_set);
-        }
+        usleep(500);
     }
 
     usleep(200 * 1000);
@@ -266,7 +271,7 @@ void scan_network()
         }
 
         bool found = false;
-        if (confirm_tcp_connection(current_socket, 10))
+        if (confirm_tcp_connection(current_socket, 1))
         {
             if (device_count < 16)
             {
