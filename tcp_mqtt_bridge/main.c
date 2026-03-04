@@ -42,6 +42,7 @@
 #define STATE_TOPIC TOPIC_ADDRESS "/state"
 #define SET_TOPIC TOPIC_ADDRESS "/set"
 #define AVAILABILITY_TOPIC TOPIC_ADDRESS "/availability"
+#define SERVICE_AVAILABILITY_TOPIC "home/cozy_light_bulb/service_availability"
 
 void scan_network();
 
@@ -100,7 +101,16 @@ void ha_discovery(struct mosquitto *mqtt, int id)
     const char *color_modes_array[] = {"color_temp"};
     cJSON_AddItemToObject(config_payload_cjson, "supported_color_modes", cJSON_CreateStringArray(color_modes_array, 1));
     cJSON_AddBoolToObject(config_payload_cjson, "color_temp_kelvin", true);
-    cJSON_AddStringToObject(config_payload_cjson, "availability_topic", availability_topic);
+
+    cJSON *availability_array = cJSON_AddArrayToObject(config_payload_cjson, "availability");
+
+    cJSON *service_obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(service_obj, "topic", SERVICE_AVAILABILITY_TOPIC);
+    cJSON_AddItemToArray(availability_array, service_obj);
+
+    cJSON *bulb_obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(bulb_obj, "topic", availability_topic);
+    cJSON_AddItemToArray(availability_array, bulb_obj);
 
     char *config_payload = cJSON_PrintUnformatted(config_payload_cjson);
     if (config_payload)
@@ -108,6 +118,7 @@ void ha_discovery(struct mosquitto *mqtt, int id)
         send_mqtt_packet(CONFIG_TOPIC, id, config_payload);
         mosquitto_subscribe(mqtt, NULL, set_topic, 0);
         send_mqtt_packet(AVAILABILITY_TOPIC, id, "online");
+        send_mqtt_packet(SERVICE_AVAILABILITY_TOPIC, -1, "online");
         free(config_payload);
     }
     cJSON_Delete(config_payload_cjson);
@@ -217,6 +228,7 @@ bool confirm_tcp_connection(int current_socket, int timeout_ms)
     int err = select(current_socket + 1, NULL, &wset, NULL, &tv);
     if (err <= 0)
     {
+#if DEBUG_LOG
         if (err == 0)
         {
             printf("[DEBUG] Select timeout at %d\n", current_socket);
@@ -225,6 +237,7 @@ bool confirm_tcp_connection(int current_socket, int timeout_ms)
         {
             printf("[DEBUG] Select Error at %d: %s\n", current_socket, strerror(errno));
         }
+#endif
         return false;
     }
 
@@ -232,7 +245,9 @@ bool confirm_tcp_connection(int current_socket, int timeout_ms)
     socklen_t len = sizeof(so_error);
     if (getsockopt(current_socket, SOL_SOCKET, SO_ERROR, &so_error, &len) < 0 || so_error != 0)
     {
+#if DEBUG_LOG
         printf("[DEBUG] connection refused at %d\n", current_socket);
+#endif
         return false;
     }
 
@@ -256,7 +271,7 @@ void scan_network()
         snprintf(ip, sizeof(ip), "%s%d", SUBNET_PREFIX, i);
 
         temp_sockets[i] = start_tcp_connection(ip);
-        usleep(500);
+        usleep(5 * 1000);
     }
 
     usleep(200 * 1000);
@@ -271,7 +286,7 @@ void scan_network()
         }
 
         bool found = false;
-        if (confirm_tcp_connection(current_socket, 1))
+        if (confirm_tcp_connection(current_socket, 0))
         {
             if (device_count < 16)
             {
@@ -520,6 +535,9 @@ bool init_mqtt()
     mosquitto_connect_callback_set(mqtt, on_mqtt_connect);
     mosquitto_message_callback_set(mqtt, receive_mqtt_packet);
 
+    const char *payload = "offline";
+    mosquitto_will_set(mqtt, SERVICE_AVAILABILITY_TOPIC, strlen(payload), payload, 1, true);
+
     if (mosquitto_connect(mqtt, HA_IP, 1883, 60) != MOSQ_ERR_SUCCESS)
     {
         printf("Error: Could not connect to MQTT Broker at %s\n", HA_IP);
@@ -554,7 +572,15 @@ void on_mqtt_connect(struct mosquitto *mqtt, void *obj, int rc)
 void send_mqtt_packet(const char *topic_base, const int id, const char *payload)
 {
     char topic[64];
-    sprintf(topic, topic_base, id);
+    if (id != -1)
+    {
+        sprintf(topic, topic_base, id);
+    }
+    else
+    {
+        strcpy(topic, topic_base);
+    }
+
     mosquitto_publish(mqtt, NULL, topic, (int)strlen(payload), payload, 0, true);
 
 #if DEBUG_LOGS
